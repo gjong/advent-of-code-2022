@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 class CalorieCountingTest extends Specification {
 
-    def "Solve"() {
+    def "Solve sample"() {
         given:
             def solution = new CalorieCounting()
         when:
@@ -24,17 +24,5 @@ class CalorieCountingTest extends Specification {
 10000""")
         then:
             answer == 24000
-    }
-
-    def "Solve real puzzle"() {
-        given:
-            def input = CalorieCounting.getResourceAsStream("/day1-caloric-input.txt")
-                    .readLines()
-                    .join("\n")
-            def solver = new CalorieCounting()
-        when:
-            def answer = solver.solve(input)
-        then:
-            answer == 71506
     }
 }

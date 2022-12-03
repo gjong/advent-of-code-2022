@@ -17,16 +17,4 @@ class GroupedRucksackTest extends Specification {
         then:
             answer == 70
     }
-
-    def "Solve real puzzle"() {
-        given:
-            def solver = new GroupedRucksack()
-        when:
-            def input = GroupedRucksack.getResourceAsStream("/day3-rucksack.txt")
-                .readLines()
-            def answer = solver.solve(input)
-        then:
-            answer == 0
-    }
-
 }

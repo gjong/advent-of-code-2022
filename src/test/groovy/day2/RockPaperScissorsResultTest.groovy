@@ -11,16 +11,4 @@ class RockPaperScissorsResultTest extends Specification {
         then:
             answer == 12
     }
-
-
-    def "Solve real puzzle"() {
-        given:
-            def input = RockPaperScissorsResult.getResourceAsStream("/day2-rock-paper-scissors.txt")
-                .readLines()
-            def solver = new RockPaperScissorsResult()
-        when:
-            def answer = solver.solve(input)
-        then:
-            answer == 0
-    }
 }
