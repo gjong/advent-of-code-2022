@@ -34,6 +34,6 @@ class GroupedCounterTest extends Specification {
         when:
             def answer = solver.solve(input)
         then:
-            answer == 71506
+            answer == 0
     }
 }
