@@ -1,8 +1,25 @@
-apply plugin: 'java'
+plugins {
+    id("groovy")
+    id("io.micronaut.application") version "3.6.5"
+}
+
+repositories {
+    mavenCentral()
+}
+
+micronaut {
+    testRuntime("spock2")
+    version "3.5.1"
+
+    processing {
+        incremental(true)
+        annotations("*")
+    }
+}
 
 java {
-    sourceCompatibility = JavaVersion.toVersion("19")
-    targetCompatibility = JavaVersion.toVersion("19")
+    sourceCompatibility = JavaVersion.toVersion("17")
+    targetCompatibility = JavaVersion.toVersion("17")
 }
 
 dependencies {
@@ -10,7 +27,4 @@ dependencies {
     implementation 'ch.qos.logback:logback-core:1.2.9'
     implementation 'ch.qos.logback:logback-classic:1.2.9'
     implementation 'com.jongsoft.lang:language:1.1.6'
-
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
-    testImplementation 'org.spockframework:spock-core'
 }
