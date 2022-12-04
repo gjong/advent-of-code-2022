@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Scanner;
 import java.util.function.Supplier;
 
 public class InputSuppliers {
@@ -19,6 +20,9 @@ public class InputSuppliers {
         return () -> readInputData(inputFile);
     }
 
+    public static Supplier<Scanner> scannerSupplier(String inputfile) {
+        return () -> new Scanner(InputSuppliers.class.getResourceAsStream(inputfile));
+    }
 
     private static List<String> readInputData(String file) {
         try {

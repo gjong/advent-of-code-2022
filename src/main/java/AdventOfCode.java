@@ -5,6 +5,8 @@ import day2.RockPaperScissors;
 import day2.RockPaperScissorsResult;
 import day3.GroupedRucksack;
 import day3.Rucksack;
+import day4.CleanupCampAnyOverlap;
+import day4.CleanupCampFullOverlap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +15,7 @@ import java.time.Instant;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static common.InputSuppliers.listSupplier;
-import static common.InputSuppliers.stringSupplier;
+import static common.InputSuppliers.*;
 
 public class AdventOfCode {
 
@@ -44,7 +45,10 @@ public class AdventOfCode {
                 new DayExecution<>("Day 2 - Part 1", new RockPaperScissorsResult(), listSupplier("/day2-rock-paper-scissors.txt")),
 
                 new DayExecution<>("Day 3 - Part 1", new Rucksack(), listSupplier("/day3-rucksack.txt")),
-                new DayExecution<>("Day 3 - Part 2", new GroupedRucksack(), listSupplier("/day3-rucksack.txt"))
+                new DayExecution<>("Day 3 - Part 2", new GroupedRucksack(), listSupplier("/day3-rucksack.txt")),
+
+                new DayExecution<>("Day 4 - Part 1", new CleanupCampFullOverlap(), scannerSupplier("/day4-cleanup.txt")),
+                new DayExecution<>("Day 4 - Part 2", new CleanupCampAnyOverlap(), scannerSupplier("/day4-cleanup.txt"))
 
         ).forEach(DayExecution::execute);
         LOG.info("Executed all found exercises.");
