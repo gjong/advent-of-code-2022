@@ -16,7 +16,7 @@ public class CleanupCampAnyOverlap implements Solution<Scanner, Integer> {
             var range1 = parseRange(sections[0]);
             var range2 = parseRange(sections[1]);
 
-            if (partialOverlap(range1, range2) || partialOverlap(range2, range1)) {
+            if (partialOverlap(range1, range2)) {
                 overlapped++;
             }
         }
