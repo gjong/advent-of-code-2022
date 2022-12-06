@@ -9,6 +9,7 @@ import day4.CleanupCampAnyOverlap;
 import day4.CleanupCampFullOverlap;
 import day5.CrateMover9000;
 import day5.SupplyStacks;
+import day6.TuningTrouble;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,7 +54,10 @@ public class AdventOfCode {
                 new DayExecution<>("Day 4 - Part 2", new CleanupCampAnyOverlap(), scannerSupplier("/day4-cleanup.txt")),
 
                 new DayExecution<>("Day 5 - Part 1", new SupplyStacks(), scannerSupplier("/day5-boxes.txt")),
-                new DayExecution<>("Day 5 - Part 2", new CrateMover9000(), scannerSupplier("/day5-boxes.txt"))
+                new DayExecution<>("Day 5 - Part 2", new CrateMover9000(), scannerSupplier("/day5-boxes.txt")),
+
+                new DayExecution<>("Day 6 - Part 1", new TuningTrouble(4), stringSupplier("/day6-code.txt")),
+                new DayExecution<>("Day 6 - Part 2", new TuningTrouble(14), stringSupplier("/day6-code.txt"))
 
         ).forEach(DayExecution::execute);
         LOG.info("Executed all found exercises.");
