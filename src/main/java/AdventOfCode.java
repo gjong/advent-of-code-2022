@@ -12,6 +12,8 @@ import day5.SupplyStacks;
 import day6.TuningTrouble;
 import day7.DirectoryListing;
 import day7.DiskCleaner;
+import day7.optimized.Day7Part1;
+import day7.optimized.Day7Part2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,7 +64,10 @@ public class AdventOfCode {
                 new DayExecution<>("Day 6 - Part 2", new TuningTrouble(14), stringSupplier("/day6-code.txt")),
 
                 new DayExecution<>("Day 7 - Part 1", new DirectoryListing(), scannerSupplier("/day7-instructions.txt")),
-                new DayExecution<>("Day 7 - Part 2", new DiskCleaner(), scannerSupplier("/day7-instructions.txt"))
+                new DayExecution<>("Day 7 - Part 2", new DiskCleaner(), scannerSupplier("/day7-instructions.txt")),
+
+                new DayExecution<>("Day 7 (Optimized) - Part 1", new Day7Part1(), scannerSupplier("/day7-instructions.txt")),
+                new DayExecution<>("Day 7 (Optimized) - Part 2", new Day7Part2(), scannerSupplier("/day7-instructions.txt"))
 
         ).forEach(DayExecution::execute);
         LOG.info("Executed all found exercises.");
