@@ -1,11 +1,12 @@
-package day3
 
+
+import common.Solution
+import day3.GroupedRucksack
+import day3.Rucksack
 import spock.lang.Specification
 
-class GroupedRucksackTest extends Specification {
-    def "Solve sample"() {
-        given:
-            def solver = new GroupedRucksack()
+class Day03Test extends Specification {
+    def "Solve Part #part"(Solution<List<String>, Integer> solver, int expected) {
         when:
             def answer = solver.solve(List.of(
                 "vJrwpWtwJgWrhcsFMMfFFhFp",
@@ -15,6 +16,11 @@ class GroupedRucksackTest extends Specification {
                 "ttgJtRGJQctTZtZT",
                 "CrZsJsPPZsGzwwsLwLmpwMDw"))
         then:
-            answer == 70
+            answer == expected
+
+        where:
+            part | solver | expected
+            1 | new Rucksack()        | 157
+            2 | new GroupedRucksack() | 70
     }
 }

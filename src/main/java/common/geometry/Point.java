@@ -3,15 +3,11 @@ package common.geometry;
 public record Point(int x, int y) {
 
     public Point translate(Point translation) {
-        return new Point(
-                x + translation.x,
-                y + translation.y);
+        return Point.of(x + translation.x, y + translation.y);
     }
 
     public Point translate(int x, int y) {
-        return new Point(
-                this.x + x,
-                this.y + y);
+        return Point.of(this.x + x, this.y + y);
     }
 
     public boolean touches(Point other) {
@@ -20,5 +16,9 @@ public record Point(int x, int y) {
     }
 
     public static Point zero = new Point(0, 0);
+
+    public static Point of(int x, int y) {
+        return new Point(x, y);
+    }
 
 }

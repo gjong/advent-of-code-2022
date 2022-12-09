@@ -1,8 +1,7 @@
-package day9
-
+import day9.RopeSolver
 import spock.lang.Specification
 
-class Day9Test extends Specification {
+class Day09Test extends Specification {
     def "Solve sample - part 1"() {
         given:
             def solution = new RopeSolver(2)

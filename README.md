@@ -31,3 +31,9 @@ This repository contains solutions designed in Java to solve the puzzles of AoC.
 |                                              | 2    | [Disk Cleaner](./src/main/java/day7/DiskCleaner.java) <br /> [Optimized Version](./src/main/java/day7/optimized/Day7Part2.java)         |
 | [Day 8](https://adventofcode.com/2022/day/8) | 1    | [Tree Top Visibility](./src/main/java/day8/TreeTopVisibility.java)                                                                      |
 |                                              | 2    | [Scenic resolution](./src/main/java/day8/ScenicSolver.java)                                                                             |
+| [Day 9](https://adventofcode.com/2022/day/9) | 1    | [Rope Tail solver](./src/main/java/day9/RopeSolver.java)                                                                                |
+|                                              | 2    | Same solution as for part 1                                                                                                             |
+
+## Running the code
+
+This repository is a Java Gradle project that requires at least Java 17 to be present on the system.
