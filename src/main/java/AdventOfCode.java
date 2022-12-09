@@ -16,6 +16,8 @@ import day7.optimized.Day7Part1;
 import day7.optimized.Day7Part2;
 import day8.ScenicSolver;
 import day8.TreeTopVisibility;
+import day9.Rope10Solver;
+import day9.RopeBridgeSolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,7 +74,10 @@ public class AdventOfCode {
                 new DayExecution<>("Day 7 (Optimized) - Part 2", new Day7Part2(), scannerSupplier("/day7-instructions.txt")),
 
                 new DayExecution<>("Day 8 - Part 1", new TreeTopVisibility(), listSupplier("/day8-trees.txt")),
-                new DayExecution<>("Day 8 - Part 2", new ScenicSolver(), listSupplier("/day8-trees.txt"))
+                new DayExecution<>("Day 8 - Part 2", new ScenicSolver(), listSupplier("/day8-trees.txt")),
+
+                new DayExecution<>("Day 9 - Part 1", new RopeBridgeSolver(), scannerSupplier("/day9-moves.txt")),
+                new DayExecution<>("Day 9 - Part 2", new Rope10Solver(), scannerSupplier("/day9-moves.txt"))
 
         ).forEach(DayExecution::execute);
         LOG.info("Executed all found exercises.");
