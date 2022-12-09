@@ -1,23 +1,19 @@
 package day9;
 
+import common.geometry.Point;
+
 enum Direction {
-    R(1, 0),
-    U(0, -1),
-    D(0, 1),
-    L(-1, 0);
-    private int deltaX;
-    private int deltaY;
+    R(new Point(1, 0)),
+    U(new Point(0, -1)),
+    D(new Point(0, 1)),
+    L(new Point(-1, 0));
+    private final Point translation;
 
-    Direction(int deltaX, int deltaY) {
-        this.deltaX = deltaX;
-        this.deltaY = deltaY;
+    Direction(Point translation) {
+        this.translation = translation;
     }
 
-    public int getDeltaX() {
-        return deltaX;
-    }
-
-    public int getDeltaY() {
-        return deltaY;
+    public Point getTranslation() {
+        return translation;
     }
 }

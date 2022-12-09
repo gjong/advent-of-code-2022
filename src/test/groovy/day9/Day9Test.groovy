@@ -5,7 +5,7 @@ import spock.lang.Specification
 class Day9Test extends Specification {
     def "Solve sample - part 1"() {
         given:
-            def solution = new RopeBridgeSolver()
+            def solution = new RopeSolver(2)
         when:
             def puzzle = new Scanner(new ByteArrayInputStream("""R 4
 U 4
@@ -22,7 +22,7 @@ R 2""".getBytes()))
 
     def "Solve sample - part 2"() {
         given:
-            def solution = new Rope10Solver()
+            def solution = new RopeSolver(10)
         when:
             def puzzle = new Scanner(new ByteArrayInputStream("""R 4
 U 4
@@ -39,7 +39,7 @@ R 2""".getBytes()))
 
     def "Solve sample 2 - part 2"() {
         given:
-            def solution = new Rope10Solver()
+            def solution = new RopeSolver(10)
         when:
             def puzzle = new Scanner(new ByteArrayInputStream("""R 5
 U 8

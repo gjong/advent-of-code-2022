@@ -1,4 +1,4 @@
-package common;
+package common.geometry;
 
 public record Point(int x, int y) {
 
@@ -20,4 +20,5 @@ public record Point(int x, int y) {
     }
 
     public static Point zero = new Point(0, 0);
+
 }
