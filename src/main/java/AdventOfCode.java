@@ -1,6 +1,8 @@
 import common.DayExecutor;
 import day1.CalorieCounting;
 import day1.GroupedCounter;
+import day10.CrtArtSolver;
+import day10.SignalStrengthSolver;
 import day2.RockPaperScissors;
 import day2.RockPaperScissorsResult;
 import day3.GroupedRucksack;
@@ -59,7 +61,10 @@ public class AdventOfCode {
                 new DayExecutor<>("Day 8 - Part 2", new ScenicSolver(), listSupplier("/day8-trees.txt")),
 
                 new DayExecutor<>("Day 9 - Part 1", new RopeSolver(2), scannerSupplier("/day9-moves.txt")),
-                new DayExecutor<>("Day 9 - Part 2", new RopeSolver(10), scannerSupplier("/day9-moves.txt"))
+                new DayExecutor<>("Day 9 - Part 2", new RopeSolver(10), scannerSupplier("/day9-moves.txt")),
+
+                new DayExecutor<>("Day 10 - Part 1", new SignalStrengthSolver(), scannerSupplier("/day10-cycles.txt")),
+                new DayExecutor<>("Day 10 - Part 2", new CrtArtSolver(), scannerSupplier("/day10-cycles.txt"))
 
         ).forEach(DayExecutor::execute);
         LOG.info("Executed all found exercises.");
