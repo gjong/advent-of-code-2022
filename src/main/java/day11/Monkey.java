@@ -1,6 +1,5 @@
 package day11;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
@@ -46,7 +45,7 @@ public class Monkey {
                 .map(worryReducer)
                 .map(x -> resolution.resolve(x))
                 .toList();
-        items = new ArrayList<>();
+        items.clear();
         return instructions;
     }
 
