@@ -46,6 +46,6 @@ public class Dijkstra<T> {
                     });
         }
 
-        throw new IllegalStateException("Could not find a route from start to end.");
+        return -1;
     }
 }

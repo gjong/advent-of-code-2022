@@ -1,4 +1,5 @@
 import day12.PathSolver
+import day12.PrettiestPathSolver
 import spock.lang.Specification
 
 class Day12Test extends Specification {
@@ -20,5 +21,14 @@ class Day12Test extends Specification {
             def answer = solver.solve(puzzle)
         then:
             answer == 31
+    }
+
+    def "Solve Part 2"() {
+        given:
+            def solver = new PrettiestPathSolver()
+        when:
+            def answer = solver.solve(puzzle)
+        then:
+            answer == 29
     }
 }
