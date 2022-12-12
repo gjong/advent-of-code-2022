@@ -35,15 +35,16 @@ public class Dijkstra<T> {
                 return visited.get(end);
             }
 
-            current.neighbours()
-                    .stream()
-                    .filter(p -> !visited.containsKey(p))
-                    .filter(grid::containsKey)
-                    .filter(p -> visitAllowed.test(grid.get(current), grid.get(p)))
-                    .forEach(p -> {
-                        visited.put(p, visited.get(current) + 1);
-                        processing.add(p);
-                    });
+            for (var neighbour : current.neighbours()) {
+                var currentVal = grid.get(neighbour);
+                var visitedVal = visited.get(neighbour);
+                if (currentVal != null && visitedVal == null) {
+                    if (visitAllowed.test(grid.get(current), currentVal)) {
+                        visited.put(neighbour, visited.get(current) + 1);
+                        processing.add(neighbour);
+                    }
+                }
+            }
         }
 
         return -1;
