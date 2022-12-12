@@ -5,6 +5,7 @@ import day10.CrtArtSolver;
 import day10.SignalStrengthSolver;
 import day11.KeepAwaySolver;
 import day11.WorryResolver;
+import day12.PathSolver;
 import day2.RockPaperScissors;
 import day2.RockPaperScissorsResult;
 import day3.GroupedRucksack;
@@ -69,7 +70,9 @@ public class AdventOfCode {
                 new DayExecutor<>("Day 10 - Part 2", new CrtArtSolver(), scannerSupplier("/day10-cycles.txt")),
 
                 new DayExecutor<>("Day 11 - Part 1", new KeepAwaySolver(20,  WorryResolver.DIV3()), stringSupplier("/day11-monkeys.txt")),
-                new DayExecutor<>("Day 11 - Part 2", new KeepAwaySolver(10000,  WorryResolver.noop()), stringSupplier("/day11-monkeys.txt"))
+                new DayExecutor<>("Day 11 - Part 2", new KeepAwaySolver(10000,  WorryResolver.noop()), stringSupplier("/day11-monkeys.txt")),
+
+                new DayExecutor<>("Day 12 - Part 1", new PathSolver(), listSupplier("/day12-mountain.txt"))
 
         ).forEach(DayExecutor::execute);
         LOG.info("Executed all found exercises.");

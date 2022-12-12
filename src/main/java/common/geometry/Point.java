@@ -1,5 +1,7 @@
 package common.geometry;
 
+import java.util.Set;
+
 public record Point(int x, int y) {
 
     public Point translate(Point translation) {
@@ -21,4 +23,17 @@ public record Point(int x, int y) {
         return new Point(x, y);
     }
 
+    /**
+     * Build the list of neighbours, this includes all points except the diagonal points that touch
+     * this point.
+     *
+     * @return
+     */
+    public Set<Point> neighbours() {
+        return Set.of(
+                this.translate(0, 1),
+                this.translate(0, - 1),
+                this.translate(-1, 0),
+                this.translate(1, 0));
+    }
 }
