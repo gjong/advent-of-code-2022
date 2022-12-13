@@ -37,6 +37,10 @@ This repository contains solutions designed in Java to solve the puzzles of AoC.
 |                                                | 2    | [CRT Strength](./src/main/java/day10/CrtArtSolver.java)                                                                                 |
 | [Day 11](https://adventofcode.com/2022/day/11) | 1    | [Keep Away](./src/main/java/day11/KeepAwaySolver.java)                                                                                  |
 |                                                | 2    | Same solution as for part 1                                                                                                             |
+| [Day 12](https://adventofcode.com/2022/day/12) | 1    | [Path Solver](./src/main/java/day12/PathSolver.java)                                                                                    |
+|                                                | 2    | [Prettiest Path Solver](./src/main/java/day12/PrettiestPathSolver.java)                                                                 |
+| [Day 13](https://adventofcode.com/2022/day/13) | 1    | [Packet Pair Solver](./src/main/java/day13/PairSolver.java)                                                                             |
+|                                                | 2    | [Packet Divider Solver](./src/main/java/day13/DividerSolver.java)                                                                       |
 
 ## Running the code
 
