@@ -24,6 +24,13 @@ public record Vector(Point start, Point end) {
         return points;
     }
 
+    public Point intersectY(int y) {
+        var dy = y - start.y();
+        var dx = (end.x() - start.x()) / (end.y() - start.y());
+
+        return Point.of(start.x() + (dy / dx), y);
+    }
+
     public Vector translate(Point alternateStart) {
         var deltaX = start.x() - alternateStart.x();
         var deltaY = start.y() - alternateStart.y();

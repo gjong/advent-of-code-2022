@@ -11,6 +11,7 @@ import day13.DividerSolver;
 import day13.PairSolver;
 import day14.SandSolver;
 import day14.SandWithFloorSolver;
+import day15.BeaconZoneSolver;
 import day2.RockPaperScissors;
 import day2.RockPaperScissorsResult;
 import day3.GroupedRucksack;
@@ -84,7 +85,9 @@ public class AdventOfCode {
                 new DayExecutor<>("Day 13 - Part 2", new DividerSolver(), scannerSupplier("/day13-pairs.txt")),
 
                 new DayExecutor<>("Day 14 - Part 1", new SandSolver(), scannerSupplier("/day14-sand.txt")),
-                new DayExecutor<>("Day 14 - Part 2", new SandWithFloorSolver(), scannerSupplier("/day14-sand.txt"))
+                new DayExecutor<>("Day 14 - Part 2", new SandWithFloorSolver(), scannerSupplier("/day14-sand.txt")),
+
+                new DayExecutor<>("Day 15 - Part 1", new BeaconZoneSolver(2000000), scannerSupplier("/day15-beacons.txt"))
 
 
         ).forEach(DayExecutor::execute);
